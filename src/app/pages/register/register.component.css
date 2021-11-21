@@ -1,0 +1,64 @@
+body {
+  font-family: 'Lato', sans-serif
+}
+
+h1 {
+  margin-bottom: 40px;
+  
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  
+}
+
+
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: 80%;
+  margin-left: 3px
+}
+
+
+
+input,
+textarea,
+select {
+    background: lavender;
+    border: 1px black solid;
+}
+
+input[type="submit"]:hover{
+    background: #0a3c09;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="submit"]{
+  background: green;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#nombre.ng-valid.ng-dirty.ng-touched ~ .valid-feedback,
+#nombre.ng-invalid.ng-dirty.ng-touched ~ .invalid-feedback,
+#apellido.ng-valid.ng-dirty.ng-touched ~ .valid-feedback,
+#apellido.ng-invalid.ng-dirty.ng-touched ~ .invalid-feedback,
+#telefono.ng-valid.ng-dirty.ng-touched ~ .valid-feedback,
+#telefono.ng-invalid.ng-dirty.ng-touched ~ .invalid-feedback,
+#email.ng-valid.ng-dirty.ng-touched ~ .valid-feedback,
+#email.ng-invalid.ng-dirty.ng-touched ~ .invalid-feedback,
+#contraseña.ng-valid.ng-dirty.ng-touched ~ .valid-feedback,
+#contraseña.ng-invalid.ng-dirty.ng-touched ~ .invalid-feedback,
+#passValid.ng-valid.ng-dirty.ng-touched ~ .valid-feedback,
+#passValid.ng-invalid.ng-dirty.ng-touched ~ .invalid-feedback,
+#passValid.ng-dirty.ng-touched ~ .text-danger{
+  display: inline-block;
+}
+
+#passValid ~ .text-danger{
+  display: none;
+}
+
+

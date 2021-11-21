@@ -1,0 +1,217 @@
+<div class="container">
+  <div class=" text-center mt-5 ">
+    <h1>Bienvenido al formulario de registro</h1>
+    <h3>Completa todos los campos para registrase en nuestra web</h3>
+  </div>
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <form class= "needs-validation" id="contact-form" role="form" [formGroup]="formularioContacto" (ngSubmit)="enviarFormulario();" >
+        <div class="controls">
+          <div class="col-md-12">
+            <label for="nombre" style="color: blue; font-weight: bold;" class="justify-content-center align-items-center">Datos de suscripcion</label>
+            <h2>* Campos obligatorios</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group justify-content-sm-end">
+                <label for="nombre">Nombre *</label>
+                <input id="nombre" type="text"
+                        name="nombre"
+                        class="form-control anchocompleto"
+                        formControlName="nombre"
+                        placeholder="Introduce tu nombre *"
+                        required="required"
+                        autofocus
+                        minlength="3">
+                <div class="valid-feedback">¡Campo Valido!</div>
+                <div class="invalid-feedback">¡Minimo usa 3 caracteres!</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="apellido">Apellidos *</label>
+                <input id="apellido" type="text"
+                        name="apellido"
+                        formControlName="apellido"
+                        class="form-control anchocompleto"
+                        placeholder="Introduce los dos apellidos *"
+                        required="required"
+                        autofocus
+                        minlength="3">
+                <div class="valid-feedback">¡Campo Valido!</div>
+                <div class="invalid-feedback">¡Minimo usa 3 caracteres!</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="telefono">Telefono *</label>
+                <input id="telefono" type="tel"
+                        name="telefono"
+                        formControlName="telefono"
+                        class="form-control"
+                        placeholder="+34 123 456 789"
+                        required="required"
+                        minlength="9">
+                <div class="valid-feedback">¡Campo Valido!</div>
+                <div class="invalid-feedback">¡Formato no valido!Minimo 9 numeros</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Dirección de correo electrónico *</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  </div>
+                  <input id="email" type="email"
+                          name="email"
+                          formControlName="email"
+                          class="form-control"
+                          placeholder="correo@dominio.com"
+                          aria-describedby="inputGroupPrepend"
+                          required="required"
+                          pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+                  <div class="valid-feedback">¡Campo Valido!</div>
+                  <div class="invalid-feedback">¡Formato no reconocido!</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="direccion">Direccion </label>
+                <input id="direccion" type="text"
+                          name="direccion"
+                          formControlName="direccion"
+                          class="form-control"
+                          placeholder="Calle,nº,piso...">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="form_localidad">Localidad</label>
+                <input id="form_localidad" type="text"
+                          name="localidad"
+                          formControlName="localidad"
+                          class="form-control"
+                          placeholder="Localidad">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="form_provincia">Provincia</label>
+                <select id="form_provincia" type="text"
+                          name="provincia"
+                          formControlName="provincia"
+                          class="form-control">
+                          <option value="">- Madrid -</option>
+                          <option value="15">A coruña</option>
+                          <option value="1">Álava</option>
+                          <option value="2">Albacete</option>
+                          <option value="3">Alicante</option>
+                          <option value="4">Almería</option>
+                          <option value="33">Asturias</option>
+                          <option value="5">Ávila</option>
+                          <option value="6">Badajoz</option>
+                          <option value="7">Baleares</option>
+                          <option value="8">Barcelona</option>
+                          <option value="9">Burgos</option>
+                          <option value="10">Cáceres</option>
+                          <option value="11">Cádiz</option>
+                          <option value="39">Cantabria</option>
+                          <option value="12">Castellón</option>
+                          <option value="51">Ceuta</option>
+                          <option value="13">Ciudad Real</option>
+                          <option value="14">Córdoba</option>
+                          <option value="16">Cuenca</option>
+                          <option value="99">Extranjero</option>
+                          <option value="17">Girona</option>
+                          <option value="18">Granada</option>
+                          <option value="19">Guadalajara</option>
+                          <option value="20">Guipúzcoa</option>
+                          <option value="21">Huelva</option>
+                          <option value="22">Huesca</option>
+                          <option value="23">Jaén</option>
+                          <option value="26">La rioja</option>
+                          <option value="35">Las palmas</option>
+                          <option value="24">León</option>
+                          <option value="25">Lleida</option>
+                          <option value="27">Lugo</option>
+                          <option value="28">Madrid</option>
+                          <option value="29">Málaga</option>
+                          <option value="52">Melilla</option>
+                          <option value="30">Murcia</option>
+                          <option value="31">Navarra</option>
+                          <option value="32">Ourense</option>
+                          <option value="34">Palencia</option>
+                          <option value="36">Pontevedra</option>
+                          <option value="37">Salamanca</option>
+                          <option value="38">Santa cruz de tenerife</option>
+                          <option value="40">Segovia</option>
+                          <option value="41">Sevilla</option>
+                          <option value="42">Soria</option>
+                          <option value="43">Tarragona</option>
+                          <option value="44">Teruel</option>
+                          <option value="45">Toledo</option>
+                          <option value="46">Valencia</option>
+                          <option value="47">Valladolid</option>
+                          <option value="48">Vizcaya</option>
+                          <option value="49">Zamora</option>
+                          <option value="50">Zaragoza</option>
+                          </select>
+              </div>
+            </div>
+          </div>  
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="contraseña">Contraseña *</label>
+                <input (change)="comprobarPass()" [(ngModel)]="nuevoPass" id="contraseña" type="password"
+                          name="contraseña"
+                          formControlName="contraseña"
+                          class="form-control"
+                          placeholder="Introduce una contraseña. Procura que sea alfanumérica"
+                          required="required"
+                          minlength="5">
+              <div class="valid-feedback">¡Campo Valido!</div>
+              <div class="invalid-feedback">¡Minimo usa 5 caracteres!</div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="passValid">Confirmacion de la Contraseña*</label>
+                <input (change)="comprobarPass()" [(ngModel)]="repeatPass" id="passValid" type="password"
+                          name="passValid"
+                          formControlName="passValid"
+                          class="form-control"
+                          placeholder="Repite la contraseña"
+                          required="required"
+                          minlength="5">
+                
+                <div *ngIf="passIguales" style="font-size: .875em;" class="text-success">¡Campo Valido!</div>
+                <div *ngIf="!passIguales" style="font-size: .875em;" class="text-danger">¡Comprueba que sea igual a la contraseña!</div>
+                <div class="invalid-feedback">¡Minimo usa 5 caracteres!</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-check">
+            <label><input input required type="checkbox" name="condiciones" value="Aceptada" formControlName="condiciones" > Acepto las condiciones de suscripción
+              </label>
+          </div>
+          <div class="col-md-12 text-center" style="padding-top: 10px;">
+            <input type="submit" value="Subscribirme" class="my-4 btn btn-success btn-send pt-2 btn-block " *ngIf="formularioContacto.valid">
+            <div class="alert alert-info" *ngIf="!formularioContacto.valid">
+            Podrá enviar el mensaje cuando todos los campos estén correctamente rellenados. </div>
+            <div class="alert alert-info" *ngIf="formularioContacto.valid">
+            Tras enviar el mensaje, será redirigido al LOGIN. </div>
+          </div>
+        </div>
+      </form>
+    </div> 
+  </div>
+</div>
